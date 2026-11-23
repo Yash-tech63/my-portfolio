@@ -1,4 +1,4 @@
-# goal: Build the image for devboard fronted and push to deocker hub
+# goal: Build the image for myportfolio push to deocker hub
 # goal: Build the image for devboard fronted and push to deocker hub
 name: CI
 
@@ -21,6 +21,7 @@ jobs:
      - name: Docker Build and push
        uses: docker/build-push-action@v7
        with:
+         file: ./Dockerfile
          push: true
          tags: ${{ vars.DOCKERHUB_USERNAME }}/my-portfolio-main:latest
      

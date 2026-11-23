@@ -28,6 +28,7 @@ jobs:
           eslint: true
           prettier: true
   build_and_push:
+   needs: [code-lint]
    runs-on: ubuntu-latest
    steps:
      - name: checkout code
